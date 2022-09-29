@@ -9,9 +9,25 @@ Have you ever had an endless list of tasks to finish without any way to organize
 #### Scenario
 As an OnTrack user, I want to utilize a task manager application to track my weekly tasks. 
 #### Examples:
-- Given:
-- When:
-- Then:
+- Given: a list of tasks 
+- When: I search for a given task that is there 
+- Then: I should receive at least one result for that keyword 
+
+- Given: a list of tasks 
+- When: I search for a task that is not there 
+- Then: I should receive a message that tells me the task is not found 
+
+- Given: a list of tasks 
+- When: I sort by due date 
+- Then: the tasks should be sorted in order by due date with the tasks due the soonest at the top 
+
+- Given: a list of tasks 
+- When: I filter by completion 
+- Then: I should see only tasks that have not been completed 
+
+- Given: a list of tasks 
+- When: I click or tap on a task 
+- Then: I should be brought to a page that shows me more information about that task 
 ### Requirement 2
 #### Scenario
 As an OnTrack user, I want to utilize a task manager application to track my weekly tasks. 
