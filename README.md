@@ -1,6 +1,7 @@
 # OnTrack - IT4045C(002)
 Francesca Suba, Grace Nordwick, Ibukunoluwa Daniel, Lilly Schott, Amber Willis
 ## Introduction
+Have you ever had an endless list of tasks to finish without any way to organize them? If so, you will be on the right track if you use our application. OnTrack gives you features to easily create, sort, and filter your tasks into a manageable format.
 ## Storyboard/Wireframe
 ![OnTrack Wireframe](https://github.com/francescasuba/OnTrack/blob/51d2663064a31c8414e6fd7cecd241bf2d00d953/storyboard.png)
 ## Functional Requirements
