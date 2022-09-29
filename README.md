@@ -2,6 +2,7 @@
 Francesca Suba, Grace Nordwick, Ibukunoluwa Daniel, Lilly Schott, Amber Willis
 ## Introduction
 ## Storyboard/Wireframe
+![OnTrack Wireframe](https://github.com/francescasuba/OnTrack/blob/51d2663064a31c8414e6fd7cecd241bf2d00d953/storyboard.png)
 ## Functional Requirements
 ### Requirement 1
 #### Scenario
