@@ -18,6 +18,7 @@ As an OnTrack user, I want to utilize a task manager application to track my wee
 - When:
 - Then:
 ## Class Diagram
+![OnTrack Class Diagram](https://github.com/francescasuba/OnTrack/blob/78ccd194ab1f1cda02d203638572429308269c1f/OnTrack%20Class%20Diagram.png)
 ## Product Backlog - link here
 ## Sprint Backlog - link here
 ## Team Roles
