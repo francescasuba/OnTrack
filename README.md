@@ -36,6 +36,14 @@ As an OnTrack user, I want to be able to log into the app so that I can access m
 - Given:
 - When:
 - Then:
+
+Notes:
+- Requirements: 
+  - Search for tasks 
+  - Login option 
+  - Create tasks 
+  - Add tasks 
+- When the user searches for data that is in the list, what they searched for should be populated. When there is nothing in the list that corresponds to the user's search, an error message should appear. When there are multiple sets of data, all data should appear in a clear, consecutive format.
 ## Class Diagram
 ![OnTrack Class Diagram](https://github.com/francescasuba/OnTrack/blob/78ccd194ab1f1cda02d203638572429308269c1f/OnTrack%20Class%20Diagram.png)
 
