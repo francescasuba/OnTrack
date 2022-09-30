@@ -47,7 +47,10 @@ As an OnTrack user, I want to be able to log into the app so that I can access m
 
 **com.ontack.dao:** contains an interface that handles interactions with a persistence mechanism. Also includes the DAO implementation class and a stub to be used as a hardcoded representation of the interface during devlopment.
 
-## Product Backlog - link here
+## Product Backlog
+Located under 'Projects' tab on github repo.
+https://github.com/users/francescasuba/projects/3
+
 ## Sprint Backlog - link here
 ## Team Roles
 - Product Owner: Francesca Suba
