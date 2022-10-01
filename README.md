@@ -7,25 +7,25 @@ Have you ever had an endless list of tasks to finish without any way to organize
 ## Functional Requirements
 ### Requirement 1
 #### Scenario
-As an OnTrack user, I want to utilize a task manager application to track my weekly tasks. 
+As an OnTrack user, I want to utilize a task manager application so that I can track my weekly tasks. 
 #### Examples:
-##### Requirement 1.1
+##### 1.1
 - Given: a list of tasks 
 - When: I search for a given task that is there 
 - Then: I should receive at least one result for that keyword 
-##### Requirement 1.2
+##### 1.2
 - Given: a list of tasks 
 - When: I search for a task that is not there 
 - Then: I should receive a message that tells me the task is not found 
-##### Requirement 1.3
+##### 1.3
 - Given: a list of tasks 
 - When: I sort by due date 
 - Then: the tasks should be sorted in order by due date with the tasks due the soonest at the top 
-##### Requirement 1.4
+##### 1.4
 - Given: a list of tasks 
 - When: I filter by completion 
 - Then: I should see only tasks that have not been completed 
-##### Requirement 1.5
+##### 1.5
 - Given: a list of tasks 
 - When: I click or tap on a task 
 - Then: I should be brought to a page that shows me more information about that task 
@@ -33,17 +33,23 @@ As an OnTrack user, I want to utilize a task manager application to track my wee
 #### Scenario
 As an OnTrack user, I want to be able to log into the app so that I can access my account and my tasks.
 #### Examples:
-- Given:
-- When:
-- Then:
+#### 2.1
+- Given: the option to log-in is available
+- When: I log in
+- Then: I should be able to access all of the tasks I've created in the past
+### Requirement 3
+#### Scenario
+As an OnTrack user, I want to be able to search for task names and keywords so that I can access the specific tasks I want quickly.
+#### Examples:
+#### 3.1
+- Given: tasks that contain the keyword 'Assignment' exist
+- When: I search the word 'Assignment'
+- Then: I receive a list of all my tasks that contain the word 'Assignment'
+#### 3.2
+- Given: tasks that contain the keyword 'Exam' do NOT exist
+- When: I search the word 'Exam'
+- Then: I receive an error message explaining that no existing tasks contain the word 'Exam'
 
-Notes:
-- Requirements: 
-  - Search for tasks 
-  - Login option 
-  - Create tasks 
-  - Add tasks 
-- When the user searches for data that is in the list, what they searched for should be populated. When there is nothing in the list that corresponds to the user's search, an error message should appear. When there are multiple sets of data, all data should appear in a clear, consecutive format.
 ## Class Diagram
 ![OnTrack Class Diagram](https://github.com/francescasuba/OnTrack/blob/78ccd194ab1f1cda02d203638572429308269c1f/OnTrack%20Class%20Diagram.png)
 
