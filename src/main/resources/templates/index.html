@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>OnTrack</title>
+	</head>
+	
+	<body>
+		<h1>OnTrack: The Superior Task Manager</h1>
+		<br/>
+		<div class="toDoWrapper">
+			<select id="toDo" required="required">
+				<option th:each="task: ${tasks}" th:value="${task.description}" th:text="${task.description}"></option>
+			</select>
+		</div>
+		<div class="inProgressWrapper"></div>
+		<div class="doneWrapper"></div>
+	</body>
+</html>
