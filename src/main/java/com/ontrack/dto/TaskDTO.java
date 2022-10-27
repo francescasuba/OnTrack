@@ -7,6 +7,13 @@ public class TaskDTO {
 	private String type;
 	private String description;
 	
+	public TaskDTO(int taskId, String name, String type, String description) {
+		this.taskId = taskId;
+		this.name = name;
+		this.type = type;
+		this.description = description;
+	}
+	
 	public int getTaskId() {
 		return taskId;
 	}
@@ -42,7 +49,7 @@ public class TaskDTO {
 
 	@Override
 	public String toString() {
-		return taskId + " " + name + " " + type + " " + description;
+		return "TaskDTO [taskId=" + taskId + ", name=" + name + ", type=" + type + ", description=" + description + "]";
 	}
 
 }

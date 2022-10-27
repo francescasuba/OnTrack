@@ -11,20 +11,37 @@
 </head>
 
 <body>
-	<h1>OnTrack: The Superior Task Manager</h1>
-	<br />
-	<div class="toDoWrapper">
-		<h3>To Do</h3>
-		<select id="toDo" required="required">
-			<option th:each="task: ${tasks}" th:value="${task.description}"
-				th:text="${task.description}"></option>
-		</select>
-	</div>
-	<div class="inProgressWrapper">
-		<h3>In Progress</h3>
-	</div>
-	<div class="doneWrapper">
-		<h3>Done</h3>
+	<div class="container">
+		<h1>OnTrack: The Superior Task Manager</h1>
+		<br />
+		<div class="toDoWrapper">
+			<h3>To Do</h3>
+			<div class="taskWrapper" th:each="tasks : ${tasks}"
+				th:if="${tasks.type} == 'To Do'">
+				<p th:text="${tasks.name}"></p>
+			</div>
+			<!-- TODO
+			<select id="toDo" required="required">
+				<option th:each="task: ${tasks}" th:value="${task.type}"
+					th:text="${task.type}"></option>
+			</select> -->
+		</div>
+
+		<div class="inProgressWrapper">
+			<h3>In Progress</h3>
+			<div class="taskWrapper" th:each="tasks : ${tasks}"
+				th:if="${tasks.type} == 'In Progress'">
+				<p th:text="${tasks.name}"></p>
+			</div>
+		</div>
+
+		<div class="doneWrapper">
+			<h3>Done</h3>
+			<div class="taskWrapper" th:each="tasks : ${tasks}"
+				th:if="${tasks.type} == 'Done'">
+				<p th:text="${tasks.name}"></p>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
