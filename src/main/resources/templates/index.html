@@ -18,9 +18,10 @@
 			<div class="col-sm">
 				<div class="toDoWrapper">
 					<h3>To Do</h3>
-					<div class="taskWrapper" th:each="tasks : ${tasks}"
-						th:if="${tasks.type} == 'To Do'">
-						<p th:text="${tasks.name}"></p>
+					<div class="card" style="width: 18rem" th:each="tasks : ${tasks}" th:if="${tasks.type} == 'To Do'">
+						<div class="card-body">
+							<p class="class-text" th:text="${tasks.name}"></p>
+						</div>
 					</div>
 					<!-- TODO
 					<select id="toDo" required="required">
