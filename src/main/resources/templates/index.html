@@ -11,14 +11,15 @@
 </head>
 
 <body>
+	<div th:replace="fragments/navbar :: navbar"></div>
+	<br>
 	<div class="container">
-		<h1>OnTrack: The Superior Task Manager</h1>
-		<br />
 		<div class="row">
 			<div class="col-sm">
 				<div class="toDoWrapper">
-					<h3>To Do</h3>
-					<div class="card" style="width: 18rem" th:each="tasks : ${tasks}" th:if="${tasks.type} == 'To Do'">
+					<h4>To Do</h4>
+					<div class="card" style="width: 18rem" th:each="tasks : ${tasks}"
+						th:if="${tasks.type} == 'To Do'">
 						<div class="card-body">
 							<p class="class-text" th:text="${tasks.name}"></p>
 						</div>
@@ -30,11 +31,12 @@
 					</select> -->
 				</div>
 			</div>
-			
+
 			<div class="col-sm">
 				<div class="inProgressWrapper">
-					<h3>To Do</h3>
-					<div class="card" style="width: 18rem" th:each="tasks : ${tasks}" th:if="${tasks.type} == 'In Progress'">
+					<h4>In Progress</h4>
+					<div class="card" style="width: 18rem" th:each="tasks : ${tasks}"
+						th:if="${tasks.type} == 'In Progress'">
 						<div class="card-body">
 							<p class="class-text" th:text="${tasks.name}"></p>
 						</div>
@@ -46,11 +48,12 @@
 					</select> -->
 				</div>
 			</div>
-			
+
 			<div class="col-sm">
 				<div class="doneWrapper">
-					<h3>To Do</h3>
-					<div class="card" style="width: 18rem" th:each="tasks : ${tasks}" th:if="${tasks.type} == 'Done'">
+					<h4>Done</h4>
+					<div class="card" style="width: 18rem" th:each="tasks : ${tasks}"
+						th:if="${tasks.type} == 'Done'">
 						<div class="card-body">
 							<p class="class-text" th:text="${tasks.name}"></p>
 						</div>
