@@ -19,7 +19,7 @@
 				<div class="toDoWrapper">
 					<h3>To Do</h3>
 					<div class="card" style="width: 18rem" th:each="tasks : ${tasks}" th:if="${tasks.type} == 'To Do'">
-						<div class="card-body">
+						<div class="card-body" style="box-shadow: 5px 10px #888888">
 							<p class="class-text" th:text="${tasks.name}"></p>
 						</div>
 					</div>
@@ -33,9 +33,9 @@
 			
 			<div class="col-sm">
 				<div class="inProgressWrapper">
-					<h3>To Do</h3>
+					<h3>In Progress</h3>
 					<div class="card" style="width: 18rem" th:each="tasks : ${tasks}" th:if="${tasks.type} == 'In Progress'">
-						<div class="card-body">
+						<div class="card-body" style="box-shadow: 5px 10px #888888">
 							<p class="class-text" th:text="${tasks.name}"></p>
 						</div>
 					</div>
@@ -49,9 +49,9 @@
 			
 			<div class="col-sm">
 				<div class="doneWrapper">
-					<h3>To Do</h3>
+					<h3>Done</h3>
 					<div class="card" style="width: 18rem" th:each="tasks : ${tasks}" th:if="${tasks.type} == 'Done'">
-						<div class="card-body">
+						<div class="card-body" style="box-shadow: 5px 10px #888888">
 							<p class="class-text" th:text="${tasks.name}"></p>
 						</div>
 					</div>
