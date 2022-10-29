@@ -19,9 +19,9 @@ public class OnTrackController {
 	@PostConstruct
 	private void loadData() {
 		// Temporary hard-coded task data
-			TaskDTO task1 = new TaskDTO(1, "Math Exam", "To Do", "Exam for math class");
-			TaskDTO task2 = new TaskDTO(2, "Art Project", "In Progress", "Project for art class");
-			TaskDTO task3 = new TaskDTO(3, "Essay", "Done", "Essay for english class");
+			TaskDTO task1 = new TaskDTO(1, "Math Exam", "To Do", "Exam for math class", "started 10/4/22");
+			TaskDTO task2 = new TaskDTO(2, "Art Project", "In Progress", "Project for art class", "started 10/4/22");
+			TaskDTO task3 = new TaskDTO(3, "Essay", "Done", "Essay for english class", "started 10/4/22");
 			
 			// create list
 			tasks = new ArrayList();
