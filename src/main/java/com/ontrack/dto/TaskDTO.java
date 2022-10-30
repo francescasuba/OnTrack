@@ -3,6 +3,7 @@ package com.ontrack.dto;
 public class TaskDTO {
 
 	private int taskId;
+	//I would change this to task or task-name
 	private String name;
 	private String type;
 	private String description;
