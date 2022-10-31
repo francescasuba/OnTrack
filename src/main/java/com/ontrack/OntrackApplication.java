@@ -9,5 +9,4 @@ public class OntrackApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(OntrackApplication.class, args);
 	}
-
 }

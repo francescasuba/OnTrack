@@ -1,7 +1,6 @@
 package com.ontrack.dto;
 
 public class TaskDTO {
-
 	private int taskId;
 	private String name;
 	private String type;
@@ -22,7 +21,6 @@ public class TaskDTO {
 		this.taskId = taskId;
 	}
 
-	
 	public String getName() {
 		return name;
 	}
@@ -51,5 +49,4 @@ public class TaskDTO {
 	public String toString() {
 		return "TaskDTO [taskId=" + taskId + ", name=" + name + ", type=" + type + ", description=" + description + "]";
 	}
-
 }

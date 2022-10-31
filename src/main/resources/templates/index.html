@@ -9,11 +9,9 @@
 	crossorigin="anonymous">
 <title>OnTrack</title>
 </head>
-
 <body>
 	<div th:replace="fragments/navbar :: navbar"></div>
 	<br />
-	
 	<div class="container">
 		<div class="row">
 			<div class="col-sm">
@@ -32,18 +30,19 @@
 									<span class="sr-only">Toggle Dropdown</span>
 								</button>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Edit</a> <a
-										class="dropdown-item" href="#">Delete</a>
+									<a class="dropdown-item" href="#">Edit</a> 
+									<a class="dropdown-item" href="#">Delete</a>
 								</div>
 							</div>
-
 						</div>
 						<div class="card-body">
 							<p class="class-text" th:text="${tasks.name}"></p>
 						</div>
 						<button type="button"
 							style="box-shadow: 5px 10px #888888"
-							class="btn btn-primary btn-outline-light btn-sm">add-item</button>
+							class="btn btn-primary btn-outline-light btn-sm">
+							add-item
+						</button>
 					</div>
 					<!-- TODO
 					<select id="toDo" required="required">
@@ -52,7 +51,6 @@
 					</select> -->
 				</div>
 			</div>
-
 			<div class="col-sm">
 				<div class="inProgressWrapper">
 					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;"
@@ -68,8 +66,8 @@
 									<span class="sr-only">Toggle Dropdown</span>
 								</button>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Edit</a> <a
-										class="dropdown-item" href="#">Delete</a>
+									<a class="dropdown-item" href="#">Edit</a> 
+									<a class="dropdown-item" href="#">Delete</a>
 								</div>
 							</div>
 						</div>
@@ -78,7 +76,9 @@
 						</div>
 						<button type="button"
 							style="box-shadow: 5px 10px #888888"
-							class="btn btn-primary btn-outline-light btn-sm">add-item</button>
+							class="btn btn-primary btn-outline-light btn-sm">
+							add-item
+						</button>
 					</div>
 					<!-- TODO
 					<select id="inProgress" required="required">
@@ -87,7 +87,6 @@
 					</select> -->
 				</div>
 			</div>
-
 			<div class="col-sm">
 				<div class="doneWrapper">
 					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;"
@@ -103,8 +102,8 @@
 									<span class="sr-only">Toggle Dropdown</span>
 								</button>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Edit</a> <a
-										class="dropdown-item" href="#">Delete</a>
+									<a class="dropdown-item" href="#">Edit</a> 
+									<a class="dropdown-item" href="#">Delete</a>
 								</div>
 							</div>
 						</div>
@@ -113,7 +112,8 @@
 						</div>
 						<button type="button"
 							style="box-shadow: 5px 10px #888888"
-							class="btn btn-primary btn-outline-light btn-sm">add-item</button>
+							class="btn btn-primary btn-outline-light btn-sm">add-item
+						</button>
 					</div>
 					<!-- TODO
 					<select id="done" required="required">
@@ -124,6 +124,5 @@
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>
