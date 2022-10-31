@@ -3,7 +3,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <!-- Bootstrap CSS -->
-<link rel="stylesheet"
+<link 
+	rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
@@ -18,30 +19,34 @@
 		<div class="row">
 			<div class="col-sm">
 				<div class="toDoWrapper">
-					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;"
+					<div 
+						class="card text-white bg-dark mb-3" 
+						style="max-width: 18rem;"
 						th:each="tasks : ${tasks}" th:if="${tasks.type} == 'To Do'">
 						<div class="card-header d-flex justify-content-between">
 							<h3>TO-DO</h3>
 							<!-- drop down button starts here.  had issues after aligning -->
 							<div class="btn-group d-flex justify-content-between">
-								<button class="btn btn-secondary btn-sm" type="button"></button>
-								<button type="button"
+								<button class="btn btn-secondary btn-sm" type="button" ></button>
+								<button 
+									type="button"
 									class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split"
 									data-toggle="dropdown" aria-haspopup="true"
 									aria-expanded="false">
 									<span class="sr-only">Toggle Dropdown</span>
 								</button>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Edit</a> <a
-										class="dropdown-item" href="#">Delete</a>
+									<a class="dropdown-item" href="#">Edit</a> 
+									<a class="dropdown-item" href="#">Delete</a>
 								</div>
 							</div>
 
 						</div>
 						<div class="card-body">
-							<p class="class-text" th:text="${tasks.name}"></p>
+							<p class="class-text" th:text="${tasks.name}" />
 						</div>
-						<button type="button"
+						<button 
+							type="button"
 							style="box-shadow: 5px 10px #888888"
 							class="btn btn-primary btn-outline-light btn-sm">add-item</button>
 					</div>
@@ -61,24 +66,28 @@
 							<h3>In Progress</h3>
 							<div class="btn-group d-flex justify-content-between">
 								<button class="btn btn-secondary btn-sm" type="button"></button>
-								<button type="button"
+								<button 
+									type="button"
 									class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split"
 									data-toggle="dropdown" aria-haspopup="true"
 									aria-expanded="false">
 									<span class="sr-only">Toggle Dropdown</span>
 								</button>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Edit</a> <a
-										class="dropdown-item" href="#">Delete</a>
+									<a class="dropdown-item" href="#">Edit</a>
+									<a class="dropdown-item" href="#">Delete</a>
 								</div>
 							</div>
 						</div>
 						<div class="card-body">
 							<p class="class-text" th:text="${tasks.name}"></p>
 						</div>
-						<button type="button"
+						<button 
+							type="button"
 							style="box-shadow: 5px 10px #888888"
-							class="btn btn-primary btn-outline-light btn-sm">add-item</button>
+							class="btn btn-primary btn-outline-light btn-sm">
+							add-item
+						</button>
 					</div>
 					<!-- TODO
 					<select id="inProgress" required="required">
@@ -109,7 +118,7 @@
 							</div>
 						</div>
 						<div class="card-body">
-							<p class="class-text" th:text="${tasks.name}"></p>
+							<p class="class-text" th:text="${tasks.name}" />
 						</div>
 						<button type="button"
 							style="box-shadow: 5px 10px #888888"
