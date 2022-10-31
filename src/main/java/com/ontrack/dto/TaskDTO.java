@@ -6,12 +6,14 @@ public class TaskDTO {
 	private String name;
 	private String type;
 	private String description;
+	private String taskdate;
 	
-	public TaskDTO(int taskId, String name, String type, String description) {
+	public TaskDTO(int taskId, String name, String type, String description, String taskdate) {
 		this.taskId = taskId;
 		this.name = name;
 		this.type = type;
 		this.description = description;
+		this.taskdate = taskdate;
 	}
 	
 	public int getTaskId() {
@@ -47,6 +49,13 @@ public class TaskDTO {
 		this.description = description;
 	}
 
+	public String getTaskDate() {
+		return taskdate;
+	}
+
+	public void setTaskDate(String taskdate) {
+		this.taskdate = taskdate;
+	}
 	@Override
 	public String toString() {
 		return "TaskDTO [taskId=" + taskId + ", name=" + name + ", type=" + type + ", description=" + description + "]";
