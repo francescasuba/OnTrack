@@ -13,6 +13,7 @@ public class TaskDTO {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	
 	@Column(name="id")
 	private int id;
 	
@@ -30,6 +31,7 @@ public class TaskDTO {
 	
 	// Set constructors
 	public TaskDTO(int id, String name, String type, String description, String dueDate) {
+		super();
 		this.id = id;
 		this.name = name;
 		this.type = type;
