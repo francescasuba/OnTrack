@@ -1,11 +1,31 @@
 package com.ontrack.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tasks")
 public class TaskDTO {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id")
 	private int id;
+	
+	@Column(name="name")
 	private String name;
+	
+	@Column(name="type")
 	private String type;
+	
+	@Column(name="description")
 	private String description;
+	
+	@Column(name="due_date")
 	private String dueDate;
 	
 	public TaskDTO(int id, String name, String type, String description, String dueDate) {
@@ -16,11 +36,11 @@ public class TaskDTO {
 		this.dueDate = dueDate;
 	}
 
-	public int getTaskId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setTaskId(int id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
