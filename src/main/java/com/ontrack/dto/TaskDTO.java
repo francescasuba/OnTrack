@@ -28,6 +28,7 @@ public class TaskDTO {
 	@Column(name="due_date")
 	private String dueDate;
 	
+	// Set constructors
 	public TaskDTO(int id, String name, String type, String description, String dueDate) {
 		this.id = id;
 		this.name = name;
@@ -35,7 +36,8 @@ public class TaskDTO {
 		this.description = description;
 		this.dueDate = dueDate;
 	}
-
+	
+	// Set getters and setters
 	public int getId() {
 		return id;
 	}
@@ -44,7 +46,6 @@ public class TaskDTO {
 		this.id = id;
 	}
 
-	
 	public String getName() {
 		return name;
 	}
@@ -77,6 +78,7 @@ public class TaskDTO {
 		this.dueDate = dueDate;
 	}
 
+	// Set toString method
 	@Override
 	public String toString() {
 		return "TaskDTO [id=" + id + ", name=" + name + ", type=" + type + ", description=" + description
