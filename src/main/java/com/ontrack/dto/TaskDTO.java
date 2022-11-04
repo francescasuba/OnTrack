@@ -2,14 +2,14 @@ package com.ontrack.dto;
 
 public class TaskDTO {
 
-	private int taskId;
+	private int id;
 	private String name;
 	private String type;
 	private String description;
 	private String dueDate;
 	
-	public TaskDTO(int taskId, String name, String type, String description, String dueDate) {
-		this.taskId = taskId;
+	public TaskDTO(int id, String name, String type, String description, String dueDate) {
+		this.id = id;
 		this.name = name;
 		this.type = type;
 		this.description = description;
@@ -17,11 +17,11 @@ public class TaskDTO {
 	}
 
 	public int getTaskId() {
-		return taskId;
+		return id;
 	}
 
-	public void setTaskId(int taskId) {
-		this.taskId = taskId;
+	public void setTaskId(int id) {
+		this.id = id;
 	}
 
 	
@@ -59,7 +59,7 @@ public class TaskDTO {
 
 	@Override
 	public String toString() {
-		return "TaskDTO [taskId=" + taskId + ", name=" + name + ", type=" + type + ", description=" + description
+		return "TaskDTO [id=" + id + ", name=" + name + ", type=" + type + ", description=" + description
 				+ ", dueDate=" + dueDate + "]";
 	}
 
