@@ -18,8 +18,7 @@
 		<div class="row">
 			<div class="col-sm">
 				<div class="toDoWrapper">
-					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;"
-						th:each="tasks : ${tasks}" th:if="${tasks.type} == 'To Do'">
+					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
 						<div class="card-header d-flex justify-content-between">
 							<h3>TO-DO</h3>
 							<!-- drop down button starts here.  had issues after aligning -->
@@ -38,8 +37,8 @@
 							</div>
 
 						</div>
-						<div class="card-body">
-							<p class="class-text" th:text="${tasks.name}"></p>
+						<div class="card-body" th:each="tasks : ${tasks}" th:if="${tasks.type} == 'To Do'">
+							<p class="class-text" th:text="${tasks.name}" />
 						</div>
 						<button type="button"
 							style="box-shadow: 5px 10px #888888"
@@ -55,8 +54,7 @@
 
 			<div class="col-sm">
 				<div class="inProgressWrapper">
-					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;"
-						th:each="tasks : ${tasks}" th:if="${tasks.type} == 'In Progress'">
+					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
 						<div class="card-header d-flex justify-content-between">
 							<h3>In Progress</h3>
 							<div class="btn-group d-flex justify-content-between">
@@ -73,8 +71,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-body">
-							<p class="class-text" th:text="${tasks.name}"></p>
+						<div class="card-body" th:each="tasks : ${tasks}" th:if="${tasks.type} == 'In Progress'">
+							<p class="class-text" th:text="${tasks.name}" />
 						</div>
 						<button type="button"
 							style="box-shadow: 5px 10px #888888"
@@ -90,8 +88,7 @@
 
 			<div class="col-sm">
 				<div class="doneWrapper">
-					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;"
-						th:each="tasks : ${tasks}" th:if="${tasks.type} == 'Done'">
+					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
 						<div class="card-header d-flex justify-content-between">
 							<h3>Done</h3>
 							<div class="btn-group d-flex justify-content-between">
@@ -108,8 +105,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-body">
-							<p class="class-text" th:text="${tasks.name}"></p>
+						<div class="card-body" th:each="tasks : ${tasks}" th:if="${tasks.type} == 'Done'">
+							<p class="class-text" th:text="${tasks.name}" />
 						</div>
 						<button type="button"
 							style="box-shadow: 5px 10px #888888"
