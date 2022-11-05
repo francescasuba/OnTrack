@@ -29,6 +29,11 @@ public class TaskDTO {
 	@Column(name="due_date")
 	private String dueDate;
 	
+	// Set default constructor
+	public TaskDTO() {
+		
+	}
+	
 	// Set constructors
 	public TaskDTO(int id, String name, String type, String description, String dueDate) {
 		super();

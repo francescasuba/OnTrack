@@ -13,7 +13,7 @@
 <body>
 	<div th:replace="fragments/navbar :: navbar"></div>
 	<br />
-	
+
 	<div class="container">
 		<div class="row">
 			<div class="col-sm">
@@ -37,11 +37,11 @@
 							</div>
 
 						</div>
-						<div class="card-body" th:each="tasks : ${tasks}" th:if="${tasks.type} == 'To Do'">
+						<div class="card-body" th:each="tasks : ${tasks}"
+							th:if="${tasks.type} == 'To Do'">
 							<p class="class-text" th:text="${tasks.name}" />
 						</div>
-						<button type="button"
-							style="box-shadow: 5px 10px #888888"
+						<button type="button" style="box-shadow: 5px 10px #888888"
 							class="btn btn-primary btn-outline-light btn-sm">add-item</button>
 					</div>
 					<!-- TODO
@@ -71,11 +71,11 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-body" th:each="tasks : ${tasks}" th:if="${tasks.type} == 'In Progress'">
+						<div class="card-body" th:each="tasks : ${tasks}"
+							th:if="${tasks.type} == 'In Progress'">
 							<p class="class-text" th:text="${tasks.name}" />
 						</div>
-						<button type="button"
-							style="box-shadow: 5px 10px #888888"
+						<button type="button" style="box-shadow: 5px 10px #888888"
 							class="btn btn-primary btn-outline-light btn-sm">add-item</button>
 					</div>
 					<!-- TODO
@@ -105,11 +105,11 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-body" th:each="tasks : ${tasks}" th:if="${tasks.type} == 'Done'">
+						<div class="card-body" th:each="tasks : ${tasks}"
+							th:if="${tasks.type} == 'Done'">
 							<p class="class-text" th:text="${tasks.name}" />
 						</div>
-						<button type="button"
-							style="box-shadow: 5px 10px #888888"
+						<button type="button" style="box-shadow: 5px 10px #888888"
 							class="btn btn-primary btn-outline-light btn-sm">add-item</button>
 					</div>
 					<!-- TODO
