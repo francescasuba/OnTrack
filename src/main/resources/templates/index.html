@@ -7,6 +7,12 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
+<style>
+	.scrollbar {
+		overflow: scroll;
+		width: 300px;
+	}
+</style>
 <title>OnTrack</title>
 </head>
 
@@ -17,6 +23,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm">
+				<div class="scrollbar">
 				<div class="toDoWrapper">
 					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;"
 						th:each="tasks : ${tasks}" th:if="${tasks.type} == 'To Do'">
@@ -51,9 +58,11 @@
 							th:text="${task.type}"></option>
 					</select> -->
 				</div>
+				</div>
 			</div>
 
 			<div class="col-sm">
+				<div class="scrollbar">
 				<div class="inProgressWrapper">
 					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;"
 						th:each="tasks : ${tasks}" th:if="${tasks.type} == 'In Progress'">
@@ -86,9 +95,11 @@
 							th:text="${task.type}"></option>
 					</select> -->
 				</div>
+				</div>
 			</div>
 
 			<div class="col-sm">
+				<div class="scrollbar">
 				<div class="doneWrapper">
 					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;"
 						th:each="tasks : ${tasks}" th:if="${tasks.type} == 'Done'">
@@ -120,6 +131,7 @@
 						<option th:each="task: ${tasks}" th:value="${task.type}"
 							th:text="${task.type}"></option>
 					</select> -->
+				</div>
 				</div>
 			</div>
 		</div>
