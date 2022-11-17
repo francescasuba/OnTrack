@@ -1,5 +1,7 @@
 package com.ontrack.service;
 
+import java.util.List;
+
 import com.ontrack.dto.TaskDTO;
 
 /**
@@ -8,15 +10,13 @@ import com.ontrack.dto.TaskDTO;
  */
 public interface ITaskService {
 
-
-	TaskDTO fetchById(int id);
+	public List<TaskDTO> findAll();
 	
-	/**
-	 * Persists the given DTO
-	 * @param specimenDTO
-	 *
-	 */
-
-	void save(TaskDTO taskDTO);
-
+	public TaskDTO findById(int id);
+	
+	public void save(TaskDTO theFaculty);
+	
+	public void deleteById(int id);
+	
 }
+

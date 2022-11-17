@@ -1,28 +1,58 @@
 package com.ontrack.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tasks")
 public class TaskDTO {
 
-	private int taskId;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	
+	@Column(name="id")
+	private int id;
+	
+	@Column(name="name")
 	private String name;
+	
+	@Column(name="type")
 	private String type;
+	
+	@Column(name="description")
 	private String description;
 	
-	public TaskDTO(int taskId, String name, String type, String description) {
-		this.taskId = taskId;
+	@Column(name="due_date")
+	private String dueDate;
+	
+	// Set default constructor
+	public TaskDTO() {
+		
+	}
+	
+	// Set constructors
+	public TaskDTO(int id, String name, String type, String description, String dueDate) {
+		super();
+		this.id = id;
 		this.name = name;
 		this.type = type;
 		this.description = description;
+		this.dueDate = dueDate;
 	}
 	
-	public int getTaskId() {
-		return taskId;
+	// Set getters and setters
+	public int getId() {
+		return id;
 	}
 
-	public void setTaskId(int taskId) {
-		this.taskId = taskId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	
 	public String getName() {
 		return name;
 	}
@@ -47,9 +77,19 @@ public class TaskDTO {
 		this.description = description;
 	}
 
+	public String getDueDate() {
+		return dueDate;
+	}
+
+	public void setDueDate(String dueDate) {
+		this.dueDate = dueDate;
+	}
+
+	// Set toString method
 	@Override
 	public String toString() {
-		return "TaskDTO [taskId=" + taskId + ", name=" + name + ", type=" + type + ", description=" + description + "]";
+		return "TaskDTO [id=" + id + ", name=" + name + ", type=" + type + ", description=" + description
+				+ ", dueDate=" + dueDate + "]";
 	}
 
 }
