@@ -1,6 +1,8 @@
 package com.ontrack.service;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ontrack.dao.ITaskRepository;
@@ -18,25 +20,34 @@ public class TaskServiceImpl implements ITaskService {
 
 	@Override
 	public List<TaskDTO> findAll() {
-		// TODO Auto-generated method stub
-		return taskRepository.findAll();
+		return taskRepository.findAllByOrderByName();
 	}
 
 	@Override
 	public TaskDTO findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Optional<TaskDTO> taskId = taskRepository.findById(id);
+		
+		TaskDTO task = null;
+		
+		if(taskId.isPresent()) {
+			task = taskId.get();
+		} 
+		else {
+			// Task not found
+			throw new RuntimeException("The TaskId you entered is invalid - " + taskId);
+		}
+		
+		return task;
 	}
 
 	@Override
 	public void save(TaskDTO task) {
-		// TODO Auto-generated method stub
-
+		taskRepository.save(task);
 	}
 
 	@Override
 	public void deleteById(int id) {
-		// TODO Auto-generated method stub
+		taskRepository.deleteById(id);
 
 	}
 
