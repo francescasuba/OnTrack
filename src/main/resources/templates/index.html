@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-<meta charset="ISO-8859-1" http-equiv="refresh" content="0; URL='/Tasks/list'">
+<meta charset="ISO-8859-1">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -16,11 +16,14 @@
 
 	<div class="container">
 		<div class="row">
+		
+		<!-- To Do Area -->
 			<div class="col-sm">
 				<div class="toDoWrapper">
 					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
 						<div class="card-header d-flex justify-content-between">
 							<h3>TO-DO</h3>
+							
 							<!-- drop down button starts here.  had issues after aligning -->
 							<div class="btn-group d-flex justify-content-between">
 								<button class="btn btn-secondary btn-sm" type="button"></button>
@@ -35,14 +38,17 @@
 										class="dropdown-item" href="#">Delete</a>
 								</div>
 							</div>
-
 						</div>
+						
 						<div class="card-body" th:each="tasks : ${tasks}"
 							th:if="${tasks.type} == 'To Do'">
 							<p class="class-text" th:text="${tasks.name}" />
 						</div>
+
+						<!-- Add Task button -->
 						<button type="button" style="box-shadow: 5px 10px #888888"
-							th:href="@{/Tasks/viewAddForm}" class="btn btn-primary btn-outline-light btn-sm">Add item</button>
+							th:href="@{/Tasks/viewAddForm}"
+							class="btn btn-primary btn-outline-light btn-sm">Add item</button>
 					</div>
 					<!-- TODO
 					<select id="toDo" required="required">
@@ -52,11 +58,13 @@
 				</div>
 			</div>
 
+		<!-- In Progress area -->
 			<div class="col-sm">
 				<div class="inProgressWrapper">
 					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
 						<div class="card-header d-flex justify-content-between">
 							<h3>In Progress</h3>
+							
 							<div class="btn-group d-flex justify-content-between">
 								<button class="btn btn-secondary btn-sm" type="button"></button>
 								<button type="button"
@@ -71,12 +79,16 @@
 								</div>
 							</div>
 						</div>
+						
 						<div class="card-body" th:each="tasks : ${tasks}"
 							th:if="${tasks.type} == 'In Progress'">
 							<p class="class-text" th:text="${tasks.name}" />
 						</div>
+
+						<!-- Add Task button -->
 						<button type="button" style="box-shadow: 5px 10px #888888"
-							th:href="@{/Tasks/viewAddForm}" class="btn btn-primary btn-outline-light btn-sm">Add Item</button>
+							th:href="@{/Tasks/viewAddForm}"
+							class="btn btn-primary btn-outline-light btn-sm">Add Item</button>
 					</div>
 					<!-- TODO
 					<select id="inProgress" required="required">
@@ -86,11 +98,13 @@
 				</div>
 			</div>
 
+		<!-- Done area -->
 			<div class="col-sm">
 				<div class="doneWrapper">
 					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
 						<div class="card-header d-flex justify-content-between">
 							<h3>Done</h3>
+							
 							<div class="btn-group d-flex justify-content-between">
 								<button class="btn btn-secondary btn-sm" type="button"></button>
 								<button type="button"
@@ -105,12 +119,16 @@
 								</div>
 							</div>
 						</div>
+						
 						<div class="card-body" th:each="tasks : ${tasks}"
 							th:if="${tasks.type} == 'Done'">
 							<p class="class-text" th:text="${tasks.name}" />
 						</div>
+						
+						<!-- Add Task button -->
 						<button type="button" style="box-shadow: 5px 10px #888888"
-							th:href="@{/Tasks/viewAddForm}" class="btn btn-primary btn-outline-light btn-sm">Add Item</button>
+							th:href="@{/Tasks/viewAddForm}"
+							class="btn btn-primary btn-outline-light btn-sm">Add Item</button>
 					</div>
 					<!-- TODO
 					<select id="done" required="required">

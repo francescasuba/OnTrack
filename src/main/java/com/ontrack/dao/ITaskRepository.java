@@ -8,6 +8,6 @@ import com.ontrack.dto.TaskDTO;
 
 public interface ITaskRepository extends JpaRepository<TaskDTO, Integer> {
 	
-	public List<TaskDTO> findAllOrderByName();
+	public List<TaskDTO> findAllByOrderByName();
 
 }

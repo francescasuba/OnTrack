@@ -20,8 +20,7 @@ public class TaskServiceImpl implements ITaskService {
 
 	@Override
 	public List<TaskDTO> findAll() {
-		// TODO Auto-generated method stub
-		return taskRepository.findAll();
+		return taskRepository.findAllByOrderByName();
 	}
 
 	@Override
@@ -32,11 +31,12 @@ public class TaskServiceImpl implements ITaskService {
 		
 		if(taskId.isPresent()) {
 			task = taskId.get();
-		}
-		else{
-			// Faculty not found
+		} 
+		else {
+			// Task not found
 			throw new RuntimeException("The TaskId you entered is invalid - " + taskId);
 		}
+		
 		return task;
 	}
 
