@@ -30,7 +30,7 @@ public class OnTrackController {
 		// Add tasks to model
 		model.addAttribute("tasks", tasks);
 		
-		return "index";
+		return "tasks/index";
 	}
 	
 	@GetMapping("/viewAddForm")
@@ -39,7 +39,7 @@ public class OnTrackController {
 		TaskDTO task = new TaskDTO();
 		model.addAttribute("task", task);
 		
-		return "add-task-form";
+		return "tasks/add-task-form";
 	}
 	
 	@PostMapping("/save")
