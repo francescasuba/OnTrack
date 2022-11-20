@@ -21,7 +21,15 @@ public class OnTrackController {
 	public OnTrackController (ITaskService theTaskService) {
 		taskService = theTaskService;
 	}
-	
+	/**
+	 * It seems you forgot to tell the person running the instructions of how to set up the database. 
+	 * 1. create database on phpMyAdmin "ontrack"
+	 * 2. then make a table named "tasks"
+	 * 3. there will be 5 columns that will have to be made. ->"id" !important add auto increment,"name","type","description","due_date"
+	 * 4. Then add information wanted on this table
+	 * @param model
+	 * @return
+	 */
 	//mapping for "/list"
 	@GetMapping("/list")
 	public String listTasks(Model model) {
@@ -32,7 +40,12 @@ public class OnTrackController {
 		
 		return "tasks/index";
 	}
-	
+	/**
+	 * I like this but you should be able to move the task to the to-do to in progress and done. 
+	 * I believe we recently got the logic last Thursday and I think it can bee added easily.
+	 * @param model
+	 * @return
+	 */
 	@GetMapping("/viewAddForm")
 	public String viewAddForm(Model model) {
 		// Model attribute for data binding
