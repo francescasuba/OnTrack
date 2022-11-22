@@ -10,21 +10,49 @@
 <title>OnTrack</title>
 </head>
 
+<style>
+	.card-header .fa {
+	  transition: .3s transform ease-in-out;
+	}
+	.card-header .collapsed .fa {
+	  transform: rotate(90deg);
+	}
+</style>
+
 <body>
 	<div th:replace="fragments/navbar :: navbar"></div>
 	<br />
+	
+	<div class="row">
+		<div class="col-sm">
+			<div id="accordion" role="tablist" aria-multiselectable="true">
+			    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;"
+						th:each="tasks : ${tasks}" th:if="${tasks.type} == 'To Do'">
+			        <h5 class="card-header" role="tab" id="heading${tasks.id}" th:text="${tasks.name}">
+			            <a data-toggle="collapse" data-parent="#accordion" href="#collapse${tasks.id}" aria-expanded="false" aria-controls="collapse${tasks.id}" class="d-block">
+			                <i class="fa fa-chevron-down pull-right"></i>
+			            </a>
+			        </h5>
 
-	<div class="container">
+			        <div id="collapse${tasks.id}" class="collapse show" role="tabpanel" aria-labelledby="heading${tasks.id}">
+			            <div class="card-body" th:text="${tasks.description}"></div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+<!-- 	<div class="container">
 		<div class="row">
 		
-		<!-- To Do Area -->
+		To Do Area
 			<div class="col-sm">
 				<div class="toDoWrapper">
 					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
 						<div class="card-header d-flex justify-content-between">
 							<h3>TO-DO</h3>
 							
-							<!-- drop down button starts here.  had issues after aligning -->
+							drop down button starts here.  had issues after aligning
 							<div class="btn-group d-flex justify-content-between">
 								<button class="btn btn-secondary btn-sm" type="button"></button>
 								<button type="button"
@@ -45,20 +73,20 @@
 							<p class="class-text" th:text="${tasks.name}" />
 						</div>
 
-						<!-- Add Task button -->
+						Add Task button
 						<a th:href="@{/Tasks/viewAddForm}"
 							class="btn btn-primary btn-outline-light btn-sm"
 							style="box-shadow: 5px 10px #888888">Add item</a>
 					</div>
-					<!-- TODO
+					TODO
 					<select id="toDo" required="required">
 						<option th:each="task: ${tasks}" th:value="${task.type}"
 							th:text="${task.type}"></option>
-					</select> -->
+					</select>
 				</div>
 			</div>
 
-		<!-- In Progress area -->
+		In Progress area
 			<div class="col-sm">
 				<div class="inProgressWrapper">
 					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
@@ -85,20 +113,20 @@
 							<p class="class-text" th:text="${tasks.name}" />
 						</div>
 
-						<!-- Add Task button -->
+						Add Task button
 						<a th:href="@{/Tasks/viewAddForm}"
 							class="btn btn-primary btn-outline-light btn-sm"
 							style="box-shadow: 5px 10px #888888">Add item</a>
 					</div>
-					<!-- TODO
+					TODO
 					<select id="inProgress" required="required">
 						<option th:each="task: ${tasks}" th:value="${task.type}"
 							th:text="${task.type}"></option>
-					</select> -->
+					</select>
 				</div>
 			</div>
 
-		<!-- Done area -->
+		Done area
 			<div class="col-sm">
 				<div class="doneWrapper">
 					<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
@@ -125,20 +153,20 @@
 							<p class="class-text" th:text="${tasks.name}" />
 						</div>
 						
-						<!-- Add Task button -->
+						Add Task button
 						<a th:href="@{/Tasks/viewAddForm}"
 							class="btn btn-primary btn-outline-light btn-sm"
 							style="box-shadow: 5px 10px #888888">Add item</a>
 					</div>
-					<!-- TODO
+					TODO
 					<select id="done" required="required">
 						<option th:each="task: ${tasks}" th:value="${task.type}"
 							th:text="${task.type}"></option>
-					</select> -->
+					</select>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 </body>
 </html>
