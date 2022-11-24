@@ -10,23 +10,22 @@ import javax.persistence.Table;
 @Entity
 @Table(name="tasks")
 public class TaskDTO {
-
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
-	@Column(name="id")
+	@Column(name = "id")
 	private int id;
 	
-	@Column(name="name")
+	@Column(name = "name")
 	private String name;
 	
-	@Column(name="type")
+	@Column(name = "type")
 	private String type;
 	
-	@Column(name="description")
+	@Column(name = "description")
 	private String description;
 	
-	@Column(name="due_date")
+	@Column(name = "due_date")
 	private String dueDate;
 	
 	// Set default constructor
@@ -91,5 +90,4 @@ public class TaskDTO {
 		return "TaskDTO [id=" + id + ", name=" + name + ", type=" + type + ", description=" + description
 				+ ", dueDate=" + dueDate + "]";
 	}
-
 }

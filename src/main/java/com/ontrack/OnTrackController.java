@@ -15,7 +15,6 @@ import com.ontrack.service.ITaskService;
 @Controller
 @RequestMapping("/Tasks")
 public class OnTrackController {
-	
 	public ITaskService taskService;
 	
 	public OnTrackController (ITaskService theTaskService) {
@@ -50,5 +49,4 @@ public class OnTrackController {
 		// Block duplicate submission on accidental refresh
 		return "redirect:/Tasks/list";
 	}
-
 }
