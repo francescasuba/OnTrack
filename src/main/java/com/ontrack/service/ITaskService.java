@@ -9,14 +9,9 @@ import com.ontrack.dto.TaskDTO;
  *
  */
 public interface ITaskService {
-
 	public List<TaskDTO> findAll();
-	
 	public TaskDTO findById(int id);
-	
 	public void save(TaskDTO theFaculty);
-	
 	public void deleteById(int id);
-	
 }
 

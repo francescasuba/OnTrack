@@ -10,7 +10,6 @@ import com.ontrack.dto.TaskDTO;
 
 @Service
 public class TaskServiceImpl implements ITaskService {
-	
 	private ITaskRepository taskRepository;
 	
 	@Autowired
@@ -26,8 +25,7 @@ public class TaskServiceImpl implements ITaskService {
 	@Override
 	public TaskDTO findById(int id) {
 		Optional<TaskDTO> taskId = taskRepository.findById(id);
-		
-		TaskDTO task = null;
+		TaskDTO task;
 		
 		if(taskId.isPresent()) {
 			task = taskId.get();
@@ -50,5 +48,4 @@ public class TaskServiceImpl implements ITaskService {
 		taskRepository.deleteById(id);
 
 	}
-
 }
