@@ -34,21 +34,26 @@
 									<span class="sr-only">Toggle Dropdown</span>
 								</button>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Edit</a> <a
-										class="dropdown-item" href="#">Delete</a>
+									<a class="dropdown-item" href="#">Edit</a> 
+									<a class="dropdown-item" href="#">Delete</a>
 								</div>
 							</div>
 						</div>
 						
-						<div class="card-body" th:each="tasks : ${tasks}"
+						<div 
+							class="card-body" 
+							th:each="tasks : ${tasks}"
 							th:if="${tasks.type} == 'To Do'">
 							<p class="class-text" th:text="${tasks.name}" />
 						</div>
 
 						<!-- Add Task button -->
-						<a th:href="@{/Tasks/viewAddForm}"
+						<a 
+							th:href="@{/Tasks/viewAddForm}"
 							class="btn btn-primary btn-outline-light btn-sm"
-							style="box-shadow: 5px 10px #888888">Add item</a>
+							style="box-shadow: 5px 10px #888888">
+							Add item
+						</a>
 					</div>
 					<!-- TODO
 					<select id="toDo" required="required">
@@ -67,28 +72,34 @@
 							
 							<div class="btn-group d-flex justify-content-between">
 								<button class="btn btn-secondary btn-sm" type="button"></button>
-								<button type="button"
+								<button 
+									type="button"
 									class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split"
 									data-toggle="dropdown" aria-haspopup="true"
 									aria-expanded="false">
 									<span class="sr-only">Toggle Dropdown</span>
 								</button>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Edit</a> <a
-										class="dropdown-item" href="#">Delete</a>
+									<a class="dropdown-item" href="#">Edit</a> 
+									<a class="dropdown-item" href="#">Delete</a>
 								</div>
 							</div>
 						</div>
 						
-						<div class="card-body" th:each="tasks : ${tasks}"
+						<div 
+							class="card-body" 
+							th:each="tasks : ${tasks}"
 							th:if="${tasks.type} == 'In Progress'">
 							<p class="class-text" th:text="${tasks.name}" />
 						</div>
 
 						<!-- Add Task button -->
-						<a th:href="@{/Tasks/viewAddForm}"
+						<a 
+							th:href="@{/Tasks/viewAddForm}"
 							class="btn btn-primary btn-outline-light btn-sm"
-							style="box-shadow: 5px 10px #888888">Add item</a>
+							style="box-shadow: 5px 10px #888888">
+							Add item
+						</a>
 					</div>
 					<!-- TODO
 					<select id="inProgress" required="required">
@@ -107,28 +118,34 @@
 							
 							<div class="btn-group d-flex justify-content-between">
 								<button class="btn btn-secondary btn-sm" type="button"></button>
-								<button type="button"
+								<button 
+									type="button"
 									class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split"
 									data-toggle="dropdown" aria-haspopup="true"
 									aria-expanded="false">
 									<span class="sr-only">Toggle Dropdown</span>
 								</button>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Edit</a> <a
-										class="dropdown-item" href="#">Delete</a>
+									<a class="dropdown-item" href="#">Edit</a> 
+									<a class="dropdown-item" href="#">Delete</a>
 								</div>
 							</div>
 						</div>
 						
-						<div class="card-body" th:each="tasks : ${tasks}"
+						<div 
+							class="card-body" 
+							th:each="tasks : ${tasks}"
 							th:if="${tasks.type} == 'Done'">
 							<p class="class-text" th:text="${tasks.name}" />
 						</div>
 						
 						<!-- Add Task button -->
-						<a th:href="@{/Tasks/viewAddForm}"
+						<a 
+							th:href="@{/Tasks/viewAddForm}"
 							class="btn btn-primary btn-outline-light btn-sm"
-							style="box-shadow: 5px 10px #888888">Add item</a>
+							style="box-shadow: 5px 10px #888888">
+							Add item
+						</a>
 					</div>
 					<!-- TODO
 					<select id="done" required="required">

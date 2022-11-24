@@ -35,17 +35,29 @@
 				<option value="Done">Done</option>
 			</select>
 			
-			<input type="text" th:field="*{description}"
-				class="form-control mb-4 col-4" placeholder="Description">
+			<input 
+				type="text" 
+				th:field="*{description}"
+				class="form-control mb-4 col-4" 
+				placeholder="Description">
 				
-			<input type="text" th:field="*{dueDate}" 
-			class="form-control mb-4 col-4" placeholder="Due Date">
+			<input 
+				type="text" 
+				th:field="*{dueDate}" 
+				class="form-control mb-4 col-4" 
+				placeholder="Due Date">
 
 			<button type="submit" class="btn btn-primary btn-outline-dark">Add</button>
 			
-			<a class="btn btn-secondary" data-toggle="collapse"
-			th:href="@{/Tasks/list}" role="button" aria-expanded="false"
-			aria-controls="collapseExample"> List of tasks </a>
+			<a 
+				class="btn btn-secondary" 
+				data-toggle="collapse"
+				th:href="@{/Tasks/list}" 
+				role="button" 
+				aria-expanded="false"
+				aria-controls="collapseExample"> 
+				List of tasks 
+			</a>
 		</form>
 
 	</div>
