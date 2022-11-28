@@ -22,10 +22,10 @@ public class OnTrackController {
 		taskService = theTaskService;
 	}
 	
-	//mapping for "/list"
+	// Mapping for "/list"
 	@GetMapping("/list")
 	public String listTasks(Model model) {
-		//Retrieve tasks from database
+		// Retrieve tasks from database
 		List<TaskDTO> tasks = taskService.findAll();
 		// Add tasks to model
 		model.addAttribute("tasks", tasks);

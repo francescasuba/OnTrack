@@ -14,6 +14,7 @@ public class TaskDTO {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	
+	// Set columns
 	@Column(name="id")
 	private int id;
 	
