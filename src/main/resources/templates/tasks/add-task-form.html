@@ -24,6 +24,9 @@
 		
 		<form action="#" th:action="@{/Tasks/save}" th:object="${task}"
 			method="POST">
+			
+			<!-- Invisible form needed to update info-->
+			<input type="hidden" th:field="*{id}">
 
 			<input type="text" th:field="*{name}" 
 			class="form-control mb-4 col-4" placeholder="Name">

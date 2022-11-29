@@ -58,7 +58,7 @@ public class OnTrackController {
 		taskService.deleteById(id);
 		
 		//return to 
-		return "redirect:/Task/list";
+		return "redirect:/Tasks/list";
 		
 	}
 
