@@ -51,13 +51,29 @@ public class OnTrackController {
 		return "redirect:/Tasks/list";
 	}
 	
+	@GetMapping("/viewUpdateForm")
+	public String  viewUpdateForm(@RequestParam("taskId") int id, Model Model) {
+		
+		
+		//Retrieve TASK info from service layer
+		TaskDTO task = taskService.findById(id);
+
+	
+		Model.addAttribute("task", task);
+		
+		//redirect us to the ADD form
+		return "tasks/add-task-form";
+		
+	}
+
+	
 	@GetMapping("/delete")
 	public String delete(@RequestParam("taskId") int id) {
 		
 		//Remove task
 		taskService.deleteById(id);
 		
-		//return to 
+	
 		return "redirect:/Tasks/list";
 		
 	}
