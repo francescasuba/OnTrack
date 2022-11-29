@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestParam;
 import com.ontrack.dto.TaskDTO;
 import com.ontrack.service.ITaskService;
 
@@ -49,6 +49,17 @@ public class OnTrackController {
 		
 		// Block duplicate submission on accidental refresh
 		return "redirect:/Tasks/list";
+	}
+	
+	@GetMapping("/delete")
+	public String delete(@RequestParam("taskId") int id) {
+		
+		//Remove task
+		taskService.deleteById(id);
+		
+		//return to 
+		return "redirect:/Task/list";
+		
 	}
 
 }

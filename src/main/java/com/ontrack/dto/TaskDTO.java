@@ -1,5 +1,7 @@
 package com.ontrack.dto;
 
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +16,8 @@ public class TaskDTO {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	
-	@Column(name="id")
+
+	@Column(name = "id")
 	private int id;
 	
 	@Column(name="name")
