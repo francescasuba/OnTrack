@@ -36,15 +36,12 @@
 								<p class="class-text" th:text="${tasks.description}" />
 								<p class="class-text" th:text="'Due' + ' ' + ${tasks.dueDate}" />
 								
-								       <!-- Delete Button -->
-								      <a th:href="@{/Tasks/delete(taskId=${tasks.id})}"
-			     class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you remove this faculty'))) return false">delete</a>
-								
+						<!-- Delete Button -->
+						<a th:href="@{/Tasks/delete(taskId=${tasks.id})}"
+			     		   class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you want to remove this task'))) return false">delete</a>
 							</div>
 						</div>
-						 
-        
-
+    
 						<!-- Add Task button -->
 						<a th:href="@{/Tasks/viewAddForm}"
 							class="btn btn-primary btn-outline-light btn-sm"
@@ -71,9 +68,10 @@
 							<div class="card-body">
 								<p class="class-text" th:text="${tasks.description}" />
 								<p class="class-text" th:text="'Due' + ' ' + ${tasks.dueDate}" />
-								<!-- Delete Button -->
-								 <a th:href="@{/Tasks/delete(taskId=${tasks.id})}"
-			     class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you remove this faculty'))) return false">delete</a>
+								
+						<!-- Delete Button -->
+						<a th:href="@{/Tasks/delete(taskId=${tasks.id})}"
+			     		   class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you want to remove this task'))) return false">delete</a>
 							</div>
 						</div>
 
@@ -103,9 +101,10 @@
 							<div class="card-body">
 								<p class="class-text" th:text="${tasks.description}" />
 								<p class="class-text" th:text="'Due' + ' ' + ${tasks.dueDate}" />
-									<!-- Delete Button -->
-								 <a th:href="@{/Tasks/delete(taskId=${tasks.id})}"
-			     					class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you want to remove this task'))) return false">delete</a>
+								
+						<!-- Delete Button -->
+						<a th:href="@{/Tasks/delete(taskId=${tasks.id})}"
+			     		   class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you want to remove this task'))) return false">delete</a>
 							</div>
 						</div>
 						
