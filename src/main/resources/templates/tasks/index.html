@@ -38,7 +38,11 @@
 								
 								       <!-- Delete Button -->
 								      <a th:href="@{/Tasks/delete(taskId=${tasks.id})}"
-			     class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you remove this faculty'))) return false">delete</a>
+			     class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you want to remove this task'))) return false">Delete</a>
+			     
+			     
+			        <a th:href="@{/Tasks/viewUpdateForm(taskId=${tasks.id})}"
+			     class="btn btn-light btn-sm">Update</a>
 								
 							</div>
 						</div>
@@ -73,7 +77,11 @@
 								<p class="class-text" th:text="'Due' + ' ' + ${tasks.dueDate}" />
 								<!-- Delete Button -->
 								 <a th:href="@{/Tasks/delete(taskId=${tasks.id})}"
-			     class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you remove this faculty'))) return false">delete</a>
+			     class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you want to remove this task'))) return false">Delete</a>
+			     
+			     
+			        <a th:href="@{/Tasks/viewUpdateForm(taskId=${tasks.id})}"
+			     class="btn btn-light btn-sm">Update</a>
 							</div>
 						</div>
 
@@ -105,7 +113,10 @@
 								<p class="class-text" th:text="'Due' + ' ' + ${tasks.dueDate}" />
 									<!-- Delete Button -->
 								 <a th:href="@{/Tasks/delete(taskId=${tasks.id})}"
-			     class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you remove this faculty'))) return false">delete</a>
+			     					class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you want to remove this task'))) return false">Delete</a>
+			     					
+			     					   <a th:href="@{/Tasks/viewUpdateForm(taskId=${tasks.id})}"
+			     class="btn btn-light btn-sm">Update</a>
 							</div>
 						</div>
 						
